@@ -1,0 +1,271 @@
+/* Apex Solar Systems — Premium Energy Brand
+   Load after shared and page-specific CSS on every page. */
+:root {
+  --bg: #F1F6F0;
+  --green: #276749;
+  --black: #183328;
+  --white: #FFFFFF;
+  --nav-bg: rgba(255,255,255,.98);
+  --card-border: #D2E0D3;
+  --gray: #53675A;
+  --light-green-grad: linear-gradient(135deg,#E5EFE3 0%,#F7F8F2 100%);
+  --apex-green-dark: #153F2D;
+  --apex-green-soft: #E4EEE2;
+  --apex-yellow: #E9B936;
+  --apex-sage: #E5EFE3;
+  --apex-cream: #F8F7F0;
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--apex-cream); color: var(--black); }
+
+/* A clean light header keeps the existing logo legible. */
+#navbar, #navbar.scrolled, .mobile-menu {
+  background: rgba(255,255,255,.98) !important;
+}
+#navbar { box-shadow: 0 2px 16px rgba(21,63,45,.08); border-bottom: 1px solid #E6EDE5; }
+#navbar.scrolled { box-shadow: 0 5px 22px rgba(21,63,45,.12); }
+.nav-brand img { object-fit: contain; }
+.brand-text .apex { color: var(--apex-green-dark); }
+.brand-text .systems { color: #53675A; }
+.nav-links li a { color: #294638; }
+.nav-links li a:hover, .nav-links li a.active { color: var(--green); background: #EDF4EB; }
+.nav-links li a.active { border-bottom-color: var(--apex-yellow); }
+.hamburger span { background: var(--apex-green-dark); }
+.mobile-menu a { color: var(--apex-green-dark); }
+
+/* Photo-led hero with a rich green overlay gives the homepage a new identity. */
+#hero { background: var(--apex-green-dark); }
+.hero-overlay {
+  background: linear-gradient(90deg,rgba(12,43,29,.88) 0%,rgba(17,58,39,.72) 48%,rgba(17,58,39,.30) 100%) !important;
+}
+.hero-content h1 { color: #FFFFFF !important; text-shadow: 0 2px 16px rgba(0,0,0,.18); }
+.hero-content h1 span, .hero-content h1 .h1-highlight { color: #FFFFFF !important; }
+.hero-content h1 .eb-bill-text { color: #F3D477 !important; }
+.hero-content p, .hero-catchlines .line { color: #F1F5EF !important; }
+.hero-catchlines .line i, .hero-catchlines .line--highlight i { color: #F3D477 !important; }
+.hero-catchlines .line--highlight { border-left-color: var(--apex-yellow) !important; }
+.hero-badge { color: #FFFFFF; border-color: rgba(243,212,119,.75); background: rgba(21,63,45,.42); }
+.btn-cta-hero {
+  color: #193B2A !important; background: var(--apex-yellow) !important;
+  border: 1px solid var(--apex-yellow) !important; box-shadow: 0 8px 24px rgba(0,0,0,.17) !important;
+  background-image: none !important; animation: none !important;
+}
+.btn-cta-hero:hover { background: #F4D477 !important; color: #153F2D !important; transform: translateY(-2px); }
+.btn-cta-wa { background: #FFFFFF !important; color: #174B33 !important; border-color: #FFFFFF !important; }
+.btn-cta-call { background: rgba(255,255,255,.08) !important; color: #FFFFFF !important; border-color: rgba(255,255,255,.7) !important; }
+.slide-dots .dot { border-color: #F3D477; background: rgba(255,255,255,.3); }
+.slide-dots .dot.active { background: #F3D477; }
+.slide-arrow { color: #FFFFFF; background: rgba(21,63,45,.68); border-color: rgba(255,255,255,.4); }
+.slide-arrow:hover { background: var(--apex-yellow); color: var(--apex-green-dark); }
+
+/* Brand palette: deliberate changes of tone between page sections. */
+.stats-bar { background: #FFFFFF !important; border-bottom: 1px solid #DCE7DA; box-shadow: 0 8px 24px rgba(21,63,45,.035); }
+.stat-item .num { color: var(--green) !important; }
+.services-section { background: var(--apex-sage) !important; }
+.solar-types-section, .apex-diff, .industrial-projects-section { background: var(--apex-cream) !important; }
+.why-section, .photo-strip, .customer-solutions-section, .solar-pricing-section { background: #FFFFFF !important; }
+.subsidy-section, .locations-section { background: var(--apex-sage) !important; }
+.industrial-section {
+  background: var(--apex-green-dark) !important; color: #F6F8F3 !important;
+  position: relative; isolation: isolate;
+}
+.industrial-section::before { content: ""; position: absolute; z-index: -1; inset: 0 0 auto; height: 4px; background: var(--apex-yellow); }
+.industrial-section h2, .industrial-section h3, .industrial-section .industrial-kicker { color: #FFFFFF !important; }
+.industrial-section h2 span { color: #F3D477 !important; }
+.industrial-section p { color: #DCE8DD !important; }
+.industrial-offering { background: rgba(255,255,255,.08) !important; border: 1px solid rgba(255,255,255,.16) !important; }
+.industrial-offering > i { color: #F3D477 !important; }
+.industrial-section .btn-primary { background: var(--apex-yellow) !important; color: var(--apex-green-dark) !important; border-color: var(--apex-yellow) !important; }
+
+/* Cards: restrained borders, soft shadows, consistent corner treatment. */
+.service-card, .why-card, .diff-card, .mvp-card, .pricing-card,
+.solar-type-card, .subsidy-side-card, .customer-solution-card,
+.contact-info-card, .contact-form-card {
+  border-color: #D6E2D4 !important;
+  box-shadow: 0 8px 24px rgba(21,63,45,.075) !important;
+  border-radius: 14px;
+}
+.service-card, .why-card, .diff-card, .mvp-card, .pricing-card, .solar-type-card, .subsidy-side-card {
+  border-top-color: var(--green) !important;
+}
+.service-card:hover, .why-card:hover, .diff-card:hover, .proj-card:hover {
+  box-shadow: 0 14px 32px rgba(21,63,45,.14) !important;
+}
+.service-card-body .icon-wrap, .why-icon, .solar-type-icon { background: var(--apex-sage) !important; }
+.service-card-body .icon-wrap i, .why-icon i, .solar-type-icon i { color: var(--green) !important; }
+.section-title { color: var(--apex-green-dark) !important; letter-spacing: -.025em; }
+.section-title span, .page-banner h1 span { color: var(--green) !important; }
+.section-sub { color: #5A6E60 !important; }
+
+/* Inner pages: sage-to-cream banner rather than another plain white strip. */
+.page-banner {
+  background: linear-gradient(125deg,#E4EEE2 0%,#F8F7F0 78%) !important;
+  border-bottom: 3px solid var(--apex-yellow) !important;
+  position: relative;
+}
+.page-banner h1 { color: var(--apex-green-dark) !important; letter-spacing: -.03em; }
+.page-banner p { color: #53675A !important; }
+.service-section-row img, .about-img-wrap .main-img { border-color: #C8DCC8 !important; }
+.feature-chip { background: #FFFFFF !important; border-left-color: var(--apex-yellow) !important; }
+
+/* FAQ: calm sage panels with a clear open state and no extra visual clutter. */
+.projects-faq, .services-faq { background: var(--apex-sage) !important; border-top-color: #D3E0D1 !important; }
+.projects-faq .faq-item, .services-faq-item {
+  background: #FFFFFF !important; border-color: #D5E2D3 !important;
+  box-shadow: 0 4px 14px rgba(21,63,45,.045) !important; border-radius: 10px;
+}
+.projects-faq .faq-item[open], .services-faq-item[open] {
+  border-color: #8EAD91 !important; box-shadow: 0 8px 22px rgba(21,63,45,.08) !important;
+}
+.projects-faq .faq-number { background: #E4EEE2 !important; color: var(--apex-green-dark) !important; }
+.projects-faq .faq-toggle, .services-faq-toggle { background: #EAF1E7 !important; color: var(--green) !important; }
+.projects-faq .faq-item[open] .faq-toggle, .services-faq-item[open] .services-faq-toggle { background: var(--green) !important; color: #FFFFFF !important; }
+.faq-kicker, .services-faq .services-faq-kicker { color: var(--green) !important; }
+
+/* Footer becomes the deep-green brand anchor. */
+footer { background: var(--apex-green-dark) !important; border-top: 4px solid var(--apex-yellow); }
+.footer-col h4 { color: #FFFFFF !important; }
+.footer-col p, .footer-col ul li a, .footer-contact-row .txt { color: #D8E5DA !important; }
+.footer-col ul li a:hover { color: #F3D477 !important; }
+.footer-icon-box { background: rgba(255,255,255,.10) !important; border-color: rgba(255,255,255,.15) !important; }
+.footer-icon-box i { color: #F3D477 !important; }
+.footer-bottom { color: #D8E5DA !important; border-top-color: rgba(255,255,255,.18) !important; }
+.footer-bottom span, .footer-bottom a, .footer-contact-row a { color: #F3D477 !important; }
+
+/* Small yellow accents only; avoid large yellow panels and glowing gradients. */
+.btn-green { background: var(--green) !important; border-color: var(--green) !important; color: #FFFFFF !important; }
+.btn-green:hover { background: var(--apex-green-dark) !important; }
+.btn-primary { background: transparent; color: var(--apex-green-dark); border-color: #9DB9A0; }
+.btn-primary:hover { background: var(--green) !important; color: #FFFFFF !important; }
+.location-chips .chip, .chip { background: rgba(255,255,255,.72); border-color: #CBDCCB !important; color: var(--apex-green-dark); }
+.text-link { color: var(--green) !important; }
+::selection { background: #D9E7D5; color: var(--apex-green-dark); }
+:focus-visible { outline-color: #789B7D; }
+
+@media (max-width: 768px) {
+  .hero-overlay { background: linear-gradient(90deg,rgba(12,43,29,.84),rgba(17,58,39,.58)) !important; }
+  .hero-content h1 { text-shadow: 0 2px 12px rgba(0,0,0,.2); }
+  .page-banner { padding-left: 24px !important; padding-right: 24px !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .btn-cta-hero { animation: none !important; transition: none !important; }
+}
+
+
+/* Accessibility/readability refinement: hero and footer contrast */
+/* Keep the photo visible, but use a more consistent dark navy-green scrim so text remains readable across every slideshow image. */
+#hero .hero-overlay {
+  background: linear-gradient(90deg,
+    rgba(10, 31, 48, 0.94) 0%,
+    rgba(15, 48, 65, 0.86) 58%,
+    rgba(15, 48, 65, 0.62) 100%) !important;
+}
+#hero .hero-content h1,
+#hero .hero-content h1 span,
+#hero .hero-content h1 .h1-highlight {
+  color: #FFFFFF !important;
+  text-shadow: 0 2px 5px rgba(0,0,0,.45) !important;
+}
+#hero .hero-content h1 .eb-bill-text {
+  color: #FFE08A !important;
+}
+#hero .hero-content p,
+#hero .hero-catchlines .line,
+#hero .hero-content .hero-badge {
+  color: #FFFFFF !important;
+  text-shadow: 0 1px 3px rgba(0,0,0,.35);
+}
+#hero .hero-catchlines .line i,
+#hero .hero-catchlines .line--highlight i {
+  color: #FFE08A !important;
+}
+#hero .hero-catchlines .line--highlight {
+  border-left-color: #FFE08A !important;
+}
+
+/* The footer brand name had inline dark colors on a dark footer; override them explicitly. */
+footer .footer-col > div:first-child > div > div:first-child {
+  color: #FFFFFF !important;
+  text-shadow: none !important;
+}
+footer .footer-col > div:first-child > div > div:nth-child(2) {
+  color: #FFE08A !important;
+  text-shadow: none !important;
+}
+footer .footer-col h4 { color: #FFFFFF !important; }
+footer .footer-col p,
+footer .footer-col ul li a,
+footer .footer-contact-row .txt,
+footer .footer-bottom {
+  color: #F1F5F9 !important;
+}
+footer .footer-col ul li a:hover,
+footer .footer-bottom a,
+footer .footer-contact-row a {
+  color: #FFE08A !important;
+}
+footer .footer-col ul li a i { color: #FFE08A !important; }
+footer .footer-col .soc-btn { color: #FFFFFF !important; }
+footer .footer-col .soc-tooltip { color: #173047 !important; }
+
+
+/* Follow-up refinement: remove all frosted/white hero text backplates and make footer social icons visible at rest. */
+#hero .hero-content h1 .h1-highlight {
+  background: none !important;
+  box-shadow: none !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+#hero .hero-catchlines .line--highlight {
+  background: transparent !important;
+  border: 0 !important;
+  border-left: 3px solid #FFE08A !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  padding: 5px 0 5px 12px !important;
+}
+#hero .hero-catchlines .line--highlight::before,
+#hero .hero-catchlines .line--highlight::after {
+  content: none !important;
+  display: none !important;
+}
+#hero .hero-content h1 .eb-bill-text { color: #FFE08A !important; }
+
+/* Social controls: high contrast before hover, with a clear focus state. */
+footer .social-icons .soc-btn {
+  background: #244B3A !important;
+  color: #FFFFFF !important;
+  border: 1px solid #DCE8DF !important;
+  opacity: 1 !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,.18);
+}
+footer .social-icons .soc-btn i {
+  color: #FFFFFF !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  font-size: 1.1rem !important;
+}
+footer .social-icons .soc-btn:hover,
+footer .social-icons .soc-btn:focus-visible {
+  background: #F4B942 !important;
+  border-color: #F4B942 !important;
+  color: #173B2B !important;
+  outline: 2px solid #FFFFFF;
+  outline-offset: 2px;
+}
+footer .social-icons .soc-btn:hover i,
+footer .social-icons .soc-btn:focus-visible i { color: #173B2B !important; }
+
+/* Keep the homepage header a single, consistent color on load and while scrolling. */
+#navbar,
+#navbar.scrolled {
+  background-color: #ffffff !important;
+  background-image: none !important;
+  opacity: 1;
+  transition: box-shadow 0.3s ease;
+}

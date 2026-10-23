@@ -1,0 +1,87 @@
+/* ── PROJECTS FAQ ACCORDION ── */
+.projects-faq {
+  padding: 76px 24px 82px;
+  background: var(--white);
+  border-top: 1px solid rgba(45,106,79,.12);
+}
+.projects-faq-inner { width: min(900px, 100%); margin: 0 auto; }
+.projects-faq-heading { margin-bottom: 34px; }
+.projects-faq .faq-kicker {
+  display: inline-flex; align-items: center; gap: 8px;
+  color: var(--green); font: 700 .78rem 'Montserrat',sans-serif;
+  letter-spacing: 1.2px; margin-bottom: 12px;
+}
+.projects-faq .section-title { margin-bottom: 12px; }
+.projects-faq .section-sub { margin-bottom: 0; line-height: 1.7; }
+.projects-faq .faq-list { display: grid; gap: 13px; }
+.projects-faq .faq-item {
+  background: #fff;
+  border: 1px solid rgba(45,106,79,.22);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(45,106,79,.045);
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.projects-faq .projects-faq .faq-item[open] {
+  border-color: rgba(45,106,79,.6);
+  box-shadow: 0 7px 22px rgba(45,106,79,.09);
+}
+.projects-faq .projects-faq .faq-item summary {
+  display: flex; align-items: center; gap: 15px;
+  padding: 20px 22px; cursor: pointer; list-style: none;
+  color: var(--black); font-family: 'Montserrat',sans-serif;
+  font-size: .98rem; font-weight: 700; line-height: 1.5;
+}
+.projects-faq .projects-faq .projects-faq .faq-item summary::-webkit-details-marker { display: none; }
+.projects-faq .projects-faq .projects-faq .faq-item summary::marker { content: ''; }
+.projects-faq .faq-number {
+  flex: 0 0 38px; width: 38px; height: 38px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 9px; background: rgba(45,106,79,.09);
+  color: var(--green); font: 800 .78rem 'Montserrat',sans-serif;
+}
+.projects-faq .faq-question { flex: 1; }
+.projects-faq .faq-toggle {
+  flex: 0 0 30px; width: 30px; height: 30px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 50%; background: var(--bg); color: var(--green);
+  transition: transform .2s ease, background .2s ease;
+}
+.projects-faq .projects-faq .faq-toggle i { font-size: .75rem; }
+.projects-faq .projects-faq .faq-item[open] .projects-faq .faq-toggle { background: var(--green); color: #fff; transform: rotate(45deg); }
+.projects-faq .faq-answer {
+  padding: 0 24px 22px 75px;
+  color: var(--gray); font-size: .93rem; line-height: 1.8;
+}
+.projects-faq .projects-faq .faq-answer p + p { margin-top: 10px; }
+.projects-faq .projects-faq .faq-answer strong { color: var(--black); }
+.projects-faq .faq-note {
+  margin: 24px auto 0; max-width: 760px; text-align: center;
+  color: var(--gray); font-size: .84rem; line-height: 1.7;
+}
+.projects-faq .projects-faq .projects-faq .faq-item summary:focus-visible {
+  outline: 3px solid rgba(45,106,79,.45); outline-offset: -4px;
+}
+@media (max-width: 600px) {
+  .projects-faq { padding: 52px 18px 58px; }
+  .projects-faq .section-title { font-size: 1.55rem; }
+  .projects-faq .projects-faq .faq-item summary { padding: 16px 14px; gap: 10px; font-size: .88rem; }
+  .projects-faq .faq-number { flex-basis: 32px; width: 32px; height: 32px; font-size: .7rem; }
+  .projects-faq .faq-toggle { flex-basis: 27px; width: 27px; height: 27px; }
+  .projects-faq .faq-answer { padding: 0 16px 18px 56px; font-size: .88rem; line-height: 1.75; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .projects-faq .faq-item, .projects-faq .faq-toggle { transition: none; }
+}
+/* Remove the default triangle before FAQ questions */
+.projects-faq .faq-item summary {
+  list-style: none;
+}
+
+.projects-faq .faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.projects-faq .faq-item summary::marker {
+  content: "";
+}
